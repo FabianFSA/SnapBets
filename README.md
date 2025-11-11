@@ -1,15 +1,13 @@
-# snapbets
+<p><a target="_blank" href="https://app.eraser.io/workspace/bUKfuTZkwey3Aftmzi35" id="edit-in-eraser-github-link"><img alt="Edit in Eraser" src="https://firebasestorage.googleapis.com/v0/b/second-petal-295822.appspot.com/o/images%2Fgithub%2FOpen%20in%20Eraser.svg?alt=media&amp;token=968381c8-a7e7-472a-8ed6-4a6626da5501"></a></p>
 
-To install dependencies:
+# SnapBets
+SnapBets is a Webproject to tipp the NFL games.
 
-```bash
-bun install
-```
+## ER-Diagram
+![SnapBets ER Diagram: Entity Relationship Diagram](undefined "SnapBets ER Diagram: Entity Relationship Diagram")
 
-To run:
 
-```bash
-bun run index.ts
-```
 
-This project was created using `bun init` in bun v1.3.2. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+
+
+<!--- Eraser file: https://app.eraser.io/workspace/bUKfuTZkwey3Aftmzi35 --->

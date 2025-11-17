@@ -1,7 +1,17 @@
-import React from "react";
-
-function logIn() {
-  return <p>"Hello Hi"</p>;
+/* eslint-disable react/react-in-jsx-scope */
+import { Button } from "./ui/button";
+function LogIn() {
+  return (
+    <div>
+      <Button variant="outline" size="lg">
+        Large!
+      </Button>
+      <br />
+      <Button variant="secondary" className="mt-4 w-full">
+        Vollbreite
+      </Button>
+    </div>
+  );
 }
 
-export default logIn;
+export default LogIn;

@@ -1,5 +1,3 @@
-import logIn from "./components/login.tsx";
-
 function MyApp() {
   return (
     <div>

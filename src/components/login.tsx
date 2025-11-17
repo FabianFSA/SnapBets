@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { Button } from "./ui/button";
 function LogIn() {
   return (

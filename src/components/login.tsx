@@ -2,15 +2,16 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-function LogIn() {
+function LogInC() {
   const [value, setValue] = useState("");
   return (
-    <div className="flex w-full max-w-lg items-center gap-2">
+    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <Input
         value={value}
         onChange={(e) => setValue(e.target.value)}
         type="email"
         placeholder="Email"
+        required
       />
       <Input type="password" placeholder="Password" />
       <Button type="submit" variant="default">
@@ -21,4 +22,4 @@ function LogIn() {
   );
 }
 
-export default LogIn;
+export default LogInC;

@@ -1,9 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import LogIn from "./components/login.tsx";
+import SnapBetsApp from "./App.tsx";
+import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <LogIn />
+    <BrowserRouter>
+      <SnapBetsApp />
+    </BrowserRouter>
   </StrictMode>
 );

@@ -7,6 +7,7 @@ export class Record {
   wins: number;
   loses: number;
   ties: number;
+  updatedAt: Date;
 
   constructor(team_fk: Team, season: number) {
     this.id = crypto.randomUUID();
@@ -15,5 +16,6 @@ export class Record {
     this.wins = 0;
     this.loses = 0;
     this.ties = 0;
+    this.updatedAt = new Date();
   }
 }

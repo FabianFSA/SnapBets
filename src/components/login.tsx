@@ -2,10 +2,17 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
+import { useNavigate } from "react-router-dom";
 function LogInC() {
   const [value, setValue] = useState("");
+  const navigate = useNavigate();
+
+  function handleReturn() {
+    navigate("/");
+  }
+
   return (
-    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <Input
         value={value}
         onChange={(e) => setValue(e.target.value)}
@@ -18,6 +25,9 @@ function LogInC() {
         Log in!
       </Button>
       <Label>Das ist deine E-Mail! {value}</Label>
+      <Button type="button" onClick={handleReturn}>
+        Return to Homepage
+      </Button>
     </div>
   );
 }

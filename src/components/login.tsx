@@ -53,7 +53,7 @@ function LogInC() {
                   <Field>
                     <Button type="submit">Login</Button>
                     <Button type="button" onClick={handleReturn}>
-                      Return to Homepage
+                      Zurück zur Homepage
                     </Button>
                   </Field>
                   <Field>

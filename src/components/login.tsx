@@ -30,8 +30,7 @@ function LogInC() {
                 Gebe hier deine E-Mail und dein Passwort ein um dich einzuloggen
               </CardDescription>
             </CardHeader>
-          </Card>
-          <CardContent>
+
             <CardContent>
               <form>
                 <FieldGroup>
@@ -45,19 +44,26 @@ function LogInC() {
                       required
                     />
                   </Field>
+                  <Field>
+                    <div className="flex items-center">
+                      <FieldLabel htmlFor="password">Passwort</FieldLabel>
+                    </div>
+                    <Input id="password" type="password" required />
+                  </Field>
+                  <Field>
+                    <Button type="submit">Login</Button>
+                    <Button type="button" onClick={handleReturn}>
+                      Return to Homepage
+                    </Button>
+                  </Field>
+                  <Field>
+                    <Label>Das ist dein E-Mail-Input Feld: {value}</Label>
+                  </Field>
                 </FieldGroup>
               </form>
             </CardContent>
-          </CardContent>
+          </Card>
         </div>
-        <Input type="password" placeholder="Password" />
-        <Button type="submit" variant="default">
-          Log in!
-        </Button>
-        <Label>Das ist deine E-Mail! {value}</Label>
-        <Button type="button" onClick={handleReturn}>
-          Return to Homepage
-        </Button>
       </div>
     </div>
   );

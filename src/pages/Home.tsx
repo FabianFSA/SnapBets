@@ -1,12 +1,6 @@
+import TeamGameDay from "@/components/teamGameDay";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -30,9 +24,7 @@ function Home() {
           </CardHeader>
           <CardContent>
             <Card>
-              <CardHeader>
-                <CardTitle>Game 1 Manschaft_1 at Mannschaft_2</CardTitle>
-              </CardHeader>
+              <TeamGameDay />
             </Card>
             <Card>
               <CardHeader>

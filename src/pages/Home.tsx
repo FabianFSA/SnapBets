@@ -1,6 +1,7 @@
 import TeamGameDay from "@/components/teamGameDay";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Teams } from "@/mocks/teams";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
           </CardHeader>
           <CardContent>
             <Card>
-              <TeamGameDay />
+              <TeamGameDay GameDayTeams={Teams} />
             </Card>
             <Card>
               <CardHeader>

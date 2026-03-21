@@ -1,16 +1,16 @@
 import type { Division } from "./Division";
-import type { Record } from "./record";
+// import { Record } from "./Record";
 
 export class Team {
   id: string; //uuid
-  division: string; //uuid_fk
+  division: Division; //uuid_fk
   // record: Record; //uuid_fk
   name: string;
   shortName: string;
   logo: string;
 
   constructor(
-    division: string,
+    division: Division,
     // record: Record,
     name: string,
     shortName: string,

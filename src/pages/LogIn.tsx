@@ -1,4 +1,4 @@
-import LogInC from "@/components/login";
+import LogInC from "@/components/login.tsx";
 
 function LogIn() {
   return <LogInC />;

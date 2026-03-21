@@ -2,24 +2,24 @@ import { Team } from "./Team";
 
 export class Game {
   id: string;
-  guestTeam: Team;
+  awayTeam: Team;
   homeTeam: Team;
   season: number;
   week: number;
   startingTime: Date;
   homeScore?: number;
-  guestScore?: number;
+  awayScore?: number;
   status: Status;
 
   constructor(
-    guestTeam: Team,
+    awayTeam: Team,
     homeTeam: Team,
     season: number,
     week: number,
-    startingTime: Date
+    startingTime: Date,
   ) {
     this.id = crypto.randomUUID();
-    this.guestTeam = guestTeam;
+    this.awayTeam = awayTeam;
     this.homeTeam = homeTeam;
     this.season = season;
     this.week = week;

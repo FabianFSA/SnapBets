@@ -1,13 +1,15 @@
-import type { Conference } from "./Conference";
-
 export class Division {
   id: string;
   conference: Conference;
   name: string;
 
-  constructor(conference: Conference, name: string) {
+  constructor(name: string, conference: Conference) {
     this.id = crypto.randomUUID();
-    this.conference = conference;
     this.name = name;
+    this.conference = conference;
   }
+}
+export enum Conference {
+  AFC = "AFC",
+  NFC = "NFC",
 }

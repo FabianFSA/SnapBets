@@ -1,7 +1,7 @@
-import TeamGameDay from "@/components/teamGameDay";
+import TeamGameDayCards from "@/components/teamGameDayCards";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Teams } from "@/mocks/teams";
+import { mockGames } from "@/mocks/games";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -21,17 +21,10 @@ function Home() {
       <div>
         <Card>
           <CardHeader>
-            <CardTitle>Spieltag 1</CardTitle>
+            <CardTitle> Week {mockGames[0]?.week || "1"}</CardTitle>
           </CardHeader>
           <CardContent>
-            <Card>
-              <TeamGameDay GameDayTeams={Teams} />
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Game 2 Manschaft_3 at Mannschaft_4</CardTitle>
-              </CardHeader>
-            </Card>
+            <TeamGameDayCards Games={mockGames} />
           </CardContent>
         </Card>
       </div>

@@ -4,7 +4,7 @@ export class Division {
   name: string;
 
   constructor(name: string, conference: Conference) {
-    this.id = crypto.randomUUID();
+    this.id = name.toLowerCase().replace(" ", "-");
     this.name = name;
     this.conference = conference;
   }

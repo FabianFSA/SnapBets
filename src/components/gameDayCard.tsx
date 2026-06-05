@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { Game } from "../../Entities/Game.ts";
 import { Card, CardContent, CardTitle } from "./ui/card";
-import { Checkbox } from "./ui/checkbox.tsx";
+import { Label } from "./ui/label.tsx";
+import { RadioGroup, RadioGroupItem } from "./ui/radio-group.tsx";
 
 interface GameCardProps {
   game: Game;
 }
 
 export function GameCard({ game }: GameCardProps) {
+  const [selectedTeam, setSelectedTeam] = useState<string>("");
+
   return (
     <Card>
       <CardTitle>
@@ -22,20 +26,28 @@ export function GameCard({ game }: GameCardProps) {
             alt={game.homeTeam.name}
             className="w-20 h-20 object-contain basis-l"
           />
-          <Checkbox id="homeTeam" name="homeTeamCheckBox"></Checkbox>
 
-          {/***
-           * Score
-           * TODO
-           * Sollte erst eingeblendet werden wenn der Spieltag schon vorbei ist
-           */}
-          {/* <div className="font-extrabold">
+          <RadioGroup value={selectedTeam} onValueChange={setSelectedTeam}>
+            <div className="flex items-center">
+              <div className="flex  items-center p-3">
+                <RadioGroupItem value={game.homeTeam.shortName} />
+              </div>
+              {/***
+               * Score
+               * TODO
+               * Sollte erst eingeblendet werden wenn der Spieltag schon vorbei ist
+               */}
+              {/* <div className="font-extrabold">
             <span>{game.homeScore || 0}</span>
             <span> : </span>
             <span>{game.awayScore || 0}</span>
           </div> */}
-          {/* Away Team */}
-          <Checkbox></Checkbox>
+              {/* Away Team */}
+
+              <RadioGroupItem value={game.awayTeam.shortName} />
+            </div>
+          </RadioGroup>
+
           <div className="basis-1/6">
             <img
               src={game.awayTeam.logo}
@@ -45,6 +57,7 @@ export function GameCard({ game }: GameCardProps) {
           </div>
           <div className="basis-1/6"> {game.awayTeam.name}</div>
         </div>
+        <Label> Teamgewählt {selectedTeam}</Label>
       </CardContent>
     </Card>
   );

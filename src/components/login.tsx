@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Label } from "./ui/label";
 import { useNavigate } from "react-router-dom";
 import {
   Card,
@@ -12,11 +11,18 @@ import {
 } from "./ui/card";
 import { Field, FieldGroup, FieldLabel } from "./ui/field";
 function LogInC() {
-  const [value, setValue] = useState("");
+  const [eMail, setValue] = useState("");
+  const [passwordInput] = useState("");
   const navigate = useNavigate();
 
   function handleReturn() {
     navigate("/");
+  }
+
+  function handleLogIn() {
+    if (eMail === "fubi.games@gmail.com") {
+      navigate("/submitLogIn");
+    }
   }
 
   return (
@@ -37,7 +43,7 @@ function LogInC() {
                   <Field>
                     <FieldLabel htmlFor="email">E-Mail</FieldLabel>
                     <Input
-                      value={value}
+                      value={eMail}
                       onChange={(e) => setValue(e.target.value)}
                       type="email"
                       placeholder="Email"
@@ -48,16 +54,20 @@ function LogInC() {
                     <div className="flex items-center">
                       <FieldLabel htmlFor="password">Passwort</FieldLabel>
                     </div>
-                    <Input id="password" type="password" required />
+                    <Input
+                      value={passwordInput}
+                      id="password"
+                      type="password"
+                      required
+                    />
                   </Field>
                   <Field>
-                    <Button type="submit">Login</Button>
+                    <Button type="submit" onClick={handleLogIn}>
+                      Login
+                    </Button>
                     <Button type="button" onClick={handleReturn}>
                       Zurück zur Homepage
                     </Button>
-                  </Field>
-                  <Field>
-                    <Label>Das ist dein E-Mail-Input Feld: {value}</Label>
                   </Field>
                 </FieldGroup>
               </form>

@@ -1,4 +1,4 @@
-import type { Game } from "Entities/Game";
+import type { Game } from "../../Entities/Game";
 import { GameCard } from "./gameDayCard";
 
 type Props = {

@@ -20,7 +20,7 @@ function LogInC() {
   }
 
   function handleLogIn() {
-    if (eMail === "fubi.games@gmail.com") {
+    if (eMail === "test@gmail.com") {
       navigate("/submitLogIn");
     }
   }

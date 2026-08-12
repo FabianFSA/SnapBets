@@ -1,9 +1,10 @@
 # dependencies (bun install)
-node_modules
+**/node_modules
 
 # output
-out
-dist
+**/out
+**/dist
+**/build
 *.tgz
 
 # code coverage
@@ -13,14 +14,19 @@ coverage
 # logs
 logs
 _.log
+*.log
 report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
+**/.env
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+**/.env.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
 
 # caches
 .eslintcache

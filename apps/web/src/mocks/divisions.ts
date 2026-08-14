@@ -1,14 +1,14 @@
-import { Conference, Division } from "../../Entities/Division";
+import { Conference } from "@snapbets/shared-types/Division.ts";
 
-export const Divisions = {
-  NFC_WEST: new Division("NFC West", Conference.NFC),
-  NFC_EAST: new Division("NFC East", Conference.NFC),
-  NFC_NORTH: new Division("NFC North", Conference.NFC),
-  NFC_SOUTH: new Division("NFC South", Conference.NFC),
-  AFC_WEST: new Division("AFC West", Conference.AFC),
-  AFC_EAST: new Division("AFC East", Conference.AFC),
-  AFC_NORTH: new Division("AFC North", Conference.AFC),
-  AFC_SOUTH: new Division("AFC South", Conference.AFC),
-} as const;
+export const Divisions = [
+  { id: "NFC_WEST", name: "NFC West", conference: Conference.NFC },
+  { id: "NFC_EAST", name: "NFC East", conference: Conference.NFC },
+  { id: "NFC_NORTH", name: "NFC North", conference: Conference.NFC },
+  { id: "NFC_SOUTH", name: "NFC South", conference: Conference.NFC },
+  { id: "AFC_WEST", name: "AFC West", conference: Conference.AFC },
+  { id: "AFC_EAST", name: "AFC East", conference: Conference.AFC },
+  { id: "AFC_NORTH", name: "AFC North", conference: Conference.AFC },
+  { id: "AFC_SOUTH", name: "AFC South", conference: Conference.AFC },
+] as const;
 
 export const allDivisions = Object.values(Divisions);

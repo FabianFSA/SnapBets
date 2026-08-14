@@ -1,14 +1,10 @@
 import { useState } from "react";
-import { Game } from "../../Entities/Game.ts";
+import type { Game } from "@snapbets/shared-types/Game.ts";
 import { Card, CardContent, CardTitle } from "./ui/card";
 import { Label } from "./ui/label.tsx";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group.tsx";
 
-interface GameCardProps {
-  game: Game;
-}
-
-export function GameCard({ game }: GameCardProps) {
+export function GameCard({ game }: { game: Game }) {
   const [selectedTeam, setSelectedTeam] = useState<string>("");
 
   return (

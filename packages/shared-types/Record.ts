@@ -5,5 +5,5 @@ export interface Record {
   wins: number;
   loses: number;
   ties: number;
-  updatedAt: Date;
+  updatedAt: string;
 }

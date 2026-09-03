@@ -1,19 +1,18 @@
 import { Teams } from "./teams.ts";
 import type { Game } from "@snapbets/shared-types/Game.ts";
-import type { Team } from "@snapbets/shared-types/Team.ts";
 import { Status as GameStatus } from "@snapbets/shared-types/Game.ts";
 
 function createMockGame(
-  awayTeam: Team,
-  homeTeam: Team,
+  awayTeamId: string,
+  homeTeamId: string,
   season: number,
   week: number,
-  startingTime: Date,
+  startingTime: string,
 ): Game {
   return {
     id: crypto.randomUUID(),
-    awayTeam,
-    homeTeam,
+    awayTeamId,
+    homeTeamId,
     season,
     week,
     startingTime,
@@ -26,86 +25,86 @@ function createMockGame(
 export const mockGames: Game[] = [
   // --- WEEK 1 ---
   createMockGame(
-    Teams.chiefs,
-    Teams.ravens,
+    Teams.chiefs.id,
+    Teams.ravens.id,
     2024,
     1,
-    new Date("2024-09-05T20:20:00Z"),
+    new Date("2024-09-05T20:20:00Z").toISOString(),
   ),
   createMockGame(
-    Teams.packers,
-    Teams.eagles,
+    Teams.packers.id,
+    Teams.eagles.id,
     2024,
     1,
-    new Date("2024-09-06T19:15:00Z"),
+    new Date("2024-09-06T19:15:00Z").toISOString(),
   ),
   createMockGame(
-    Teams.steelers,
-    Teams.falcons,
+    Teams.steelers.id,
+    Teams.falcons.id,
     2024,
     1,
-    new Date("2024-09-08T19:00:00Z"),
+    new Date("2024-09-08T19:00:00Z").toISOString(),
   ),
   createMockGame(
-    Teams.cardinals,
-    Teams.rams,
+    Teams.cardinals.id,
+    Teams.rams.id,
     2024,
     1,
-    new Date("2024-09-08T19:00:00Z"),
+    new Date("2024-09-08T19:00:00Z").toISOString(),
   ),
   createMockGame(
-    Teams.titans,
-    Teams.bears,
+    Teams.titans.id,
+    Teams.bears.id,
     2024,
     1,
-    new Date("2024-09-08T19:00:00Z"),
+    new Date("2024-09-08T19:00:00Z").toISOString(),
   ),
   createMockGame(
-    Teams.jaguars,
-    Teams.dolphins,
+    Teams.jaguars.id,
+    Teams.dolphins.id,
     2024,
     1,
-    new Date("2024-09-08T19:00:00Z"),
+    new Date("2024-09-08T19:00:00Z").toISOString(),
   ),
 
   // --- LATE GAMES (22:25 CET) ---
   createMockGame(
-    Teams.seahawks,
-    Teams.fourtyNiners,
+    Teams.seahawks.id,
+    Teams.fourtyNiners.id,
     2024,
     1,
-    new Date("2024-09-08T22:25:00Z"),
+    new Date("2024-09-08T22:25:00Z").toISOString(),
   ),
   createMockGame(
-    Teams.cowboys,
-    Teams.browns,
+    Teams.cowboys.id,
+    Teams.browns.id,
     2024,
     1,
-    new Date("2024-09-08T22:25:00Z"),
+    new Date("2024-09-08T22:25:00Z").toISOString(),
   ),
   createMockGame(
-    Teams.raiders,
-    Teams.chargers,
+    Teams.raiders.id,
+    Teams.chargers.id,
     2024,
     1,
-    new Date("2024-09-08T22:25:00Z"),
+    new Date("2024-09-08T22:25:00Z").toISOString(),
   ),
 
   // --- SUNDAY NIGHT FOOTBALL ---
   createMockGame(
-    Teams.bills,
-    Teams.jets,
+    Teams.bills.id,
+    Teams.jets.id,
     2024,
     1,
-    new Date("2024-09-09T02:20:00Z"),
+    new Date("2024-09-09T02:20:00Z").toISOString(),
   ),
 
   // --- MONDAY NIGHT FOOTBALL ---
   createMockGame(
-    Teams.vikings,
-    Teams.giants,
+    Teams.vikings.id,
+    Teams.giants.id,
     2024,
     1,
-    new Date("2024-09-10T02:15:00Z"),
+    new Date("2024-09-10T02:15:00Z").toISOString(),
   ),
 ];

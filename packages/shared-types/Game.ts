@@ -1,3 +1,5 @@
+import type { Team } from "./src";
+
 export interface Game {
   id: string;
   awayTeamId: string;
@@ -8,6 +10,11 @@ export interface Game {
   homeScore?: number;
   awayScore?: number;
   status: Status;
+}
+
+export interface GameWithTeams extends Game {
+  awayTeam: Team;
+  homeTeam: Team;
 }
 
 export enum Status {

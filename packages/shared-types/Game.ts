@@ -1,12 +1,10 @@
-import { Team } from "./Team";
-
 export interface Game {
   id: string;
-  awayTeam: Team;
-  homeTeam: Team;
+  awayTeamId: string;
+  homeTeamId: string;
   season: number;
   week: number;
-  startingTime: Date;
+  startingTime: string; // ISO 8601 date string
   homeScore?: number;
   awayScore?: number;
   status: Status;

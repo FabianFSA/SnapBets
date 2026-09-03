@@ -1,8 +1,6 @@
-import { Team } from "./Team";
-
 export interface Record {
   id: string;
-  team_fk: Team;
+  teamId: string;
   season: number;
   wins: number;
   loses: number;
